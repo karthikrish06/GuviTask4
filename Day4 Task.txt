@@ -1,0 +1,146 @@
+//Anonymous function for Oddnumbers
+
+let printOddNumber = function (arr){
+    for(i=0; i<arr.length; i++){
+        if(arr[i] % 2 !==0){
+            console.log(arr[i]);
+        }
+    }
+}
+printOddNumber([1,2,3,4,5,6,7,8,9]);
+
+//for Arrow function
+
+let printArrowOdd = (arr) => {
+    for(i=0; i<arr.length; i++){
+        if(arr[i] % 2 !==0){
+            console.log(arr[i]);
+        }
+    }
+}
+printArrowOdd([1,2,3,4,5,6,7,8,9]);
+
+//For IIFE
+
+(function printOdd(arr){
+    for(i=0; i<arr.length; i++){
+        if(arr[i] % 2 !==0){
+            console.log(arr[i]);
+        }
+    }  
+})([1,2,3,4,5,6,7,8,9]);
+
+// Caps for IIFE Method
+
+  (function titleCase(str) {
+    str = str.toUpperCase();
+    
+    console.log(str);
+})
+("geeks for geeks");
+
+//Caps for Arrow Function
+
+let capsStr = (str)=> {
+    str = str.toUpperCase();
+    
+    console.log(str);
+}
+capsStr(("geeks for geeks"));
+
+//caps for Anonymous Function
+
+let capsString = function (str){
+    str = str.toUpperCase();
+
+    console.log(str);
+}
+capsString(("geeks for geeks"));
+
+//sum of strings for anonymous function
+
+let sumNumber = function (sum1,sum2,sum3) {
+      let result = sum1+sum2+sum3;
+        console.log(result);
+    }
+sumNumber(1,2,3);
+
+//sum of strings for Arrow function
+
+let sumArrow = (sum1,sum2,sum3) => {
+    let result = sum1+sum2+sum3;
+        console.log(result);
+}
+sumNumber(1,2,3);
+
+
+//sum of strings for IIFE Function
+
+(function sumImm (sum1,sum2,sum3){
+    let result = sum1+sum2+sum3;
+        console.log(result);
+}) (1,2,3);
+
+//print Palindrome using IIFE Function
+
+(function isPalindrome(str) {
+    let rev = str.split("").reverse().join("");
+ 
+    console.log(rev);
+ 
+}) ("MADAM");
+
+//print Palindrome Anonymous Function
+
+let numPal = function (str) {
+    let rev = str.split("").reverse().join("");
+ 
+    console.log(rev);
+}
+numPal("MADAM");
+
+//print palindrome Arrow Function
+
+let palArr = (str) => {
+    let rev = str.split("").reverse().join("");
+ 
+    console.log(rev);
+}
+palArr("MADAM");
+
+//print prime numbers in the given value using IIFE
+
+(function test_prime(n) {
+
+    
+      for (let x = 2; x < n; x++) {
+        if (n % x === 0) {
+          return false;
+        }
+      }
+      console.log(n);  
+    }) (13);
+
+    //print prime numbers in the given value using anonymous function
+
+    let primeNum = function (n) {
+        for (let x = 2; x < n; x++) {
+            if (n % x === 0) {
+              return false;
+            }
+          }
+          console.log(n);   
+    }
+    primeNum(13);
+
+    //print prime numbers in the given value using Arrow function
+
+    let primeArr = (num) => {
+        for (let x = 2; x < num; x++) {
+            if (num % x === 0) {
+              return false;
+            }
+          }
+          console.log(num);
+    }
+    primeArr(13);
